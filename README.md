@@ -23,28 +23,15 @@ https://user-images.githubusercontent.com/73919235/185897223-e967a0b7-cbb2-4db0-
 
 <br>
 
-### Tech Stack
-
-```json
-  "dependencies": {
-    "firebase": "^9.9.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-redux": "^8.0.2",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "redux": "^4.2.0",
-    "redux-thunk": "^2.4.1",
-    "styled-components": "^5.3.5"
-  }
-```
-<br>
-
-### Installation
+### How to run
 
 ```bash
-$ git clone
-$ cd bucket-list
+# 프로젝트 클론
+$ git clone https://github.com/kwakhyun/bucket-list-app.git
+
+# 의존성 패키지 설치
 $ yarn
+
+# 프로젝트 실행
 $ yarn start
 ```
