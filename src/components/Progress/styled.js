@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const Percent = styled.span`
+export const StyledPercent = styled.span`
   color: #f1948a;
   font-family: "Gugi", cursive;
 `;
 
-export const ProgressBar = styled.div`
+export const StyledProgressBar = styled.div`
   background-color: aliceblue;
   width: 100%;
   height: 40px;
@@ -14,7 +14,7 @@ export const ProgressBar = styled.div`
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 `;
 
-export const HighLight = styled.div`
+export const StyledHighLight = styled.div`
   background-color: #f1948a;
   width: ${({ width, length }) => (length ? width : 0)};
   height: 40px;

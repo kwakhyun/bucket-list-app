@@ -1,10 +1,11 @@
-import React from "react";
-import { Text, Grid, StyleBtn } from "../styles/DetailStyle";
 import { useNavigate, useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { deleteBucketFB, updateBucketFB } from "../redux/modules/bucket";
 
-const Detail = () => {
+import { useDispatch, useSelector } from "react-redux";
+import { deleteBucketFB, updateBucketFB } from "../../redux/modules/bucket";
+
+import { StyledText, StyledGrid, StyledButton } from "./styled";
+
+export const Detail = () => {
   const params = useParams();
   const navigate = useNavigate();
   
@@ -13,30 +14,28 @@ const Detail = () => {
 
   return (
     <div>
-      <Text>
+      <StyledText>
         {bucket_list[params.index] ? bucket_list[params.index].text : ""}
-      </Text>
-      <Grid>
-        <StyleBtn
+      </StyledText>
+      <StyledGrid>
+        <StyledButton
           onClick={() => {
             dispatch(updateBucketFB(bucket_list[params.index].id));
             navigate("/");
           }}
         >
           완료
-        </StyleBtn>
-        <StyleBtn
+        </StyledButton>
+        <StyledButton
           onClick={() => {
             dispatch(deleteBucketFB(bucket_list[params.index].id));
             navigate("/");
           }}
         >
           삭제
-        </StyleBtn>
-        <StyleBtn onClick={() => navigate(-1)}>뒤로가기</StyleBtn>
-      </Grid>
+        </StyledButton>
+        <StyledButton onClick={() => navigate(-1)}>뒤로가기</StyledButton>
+      </StyledGrid>
     </div>
   );
 };
-
-export default Detail;

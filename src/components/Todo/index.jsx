@@ -1,17 +1,17 @@
-import React from "react";
-import { StyleList, StyleItem } from "../styles/TodoStyle";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const Todo = () => {
+import { StyledList, StyledItem } from "./styled";
+
+export const Todo = () => {
   const navigate = useNavigate();
   const bucketList = useSelector((state) => state.bucket.list);
-  
+
   return (
-    <StyleList>
+    <StyledList>
       {bucketList.map((item, index) => {
         return (
-          <StyleItem
+          <StyledItem
             completed={item.completed}
             key={index}
             onClick={() => {
@@ -19,11 +19,9 @@ const Todo = () => {
             }}
           >
             {item.text}
-          </StyleItem>
+          </StyledItem>
         );
       })}
-    </StyleList>
+    </StyledList>
   );
 };
-
-export default Todo;

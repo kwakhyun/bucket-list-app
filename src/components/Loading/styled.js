@@ -1,11 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-const Loading = () => {
-  return <Div></Div>;
-};
-
-const Div = styled.div`
+export const StyledLoading = styled.div`
   background-image: url("loading_img.gif");
   width: 100vw;
   height: 100vh;
@@ -13,5 +8,3 @@ const Div = styled.div`
   left: 0;
   z-index: 1;
 `;
-
-export default Loading;

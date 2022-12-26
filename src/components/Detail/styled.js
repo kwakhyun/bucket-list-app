@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
-export const Grid = styled.div`
+export const StyledGrid = styled.div`
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 `;
 
-export const Text = styled.h1`
+export const StyledText = styled.h1`
   font-family: "Gugi", cursive;
 `;
 
-export const StyleBtn = styled.button`
+export const StyledButton = styled.button`
   font-family: "Gugi", cursive;
   background-color: aliceblue;
   border: 2px dashed #f1948a;

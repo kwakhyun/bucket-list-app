@@ -1,8 +1,8 @@
-import React from "react";
-import { Percent, ProgressBar, HighLight } from "../styles/ProgressStyle";
 import { useSelector } from "react-redux";
 
-const Progress = () => {
+import { StyledPercent, StyledProgressBar, StyledHighLight } from "./styled";
+
+export const Progress = () => {
   const bucketList = useSelector((state) => state.bucket.list);
 
   const count = bucketList.reduce((acc, cur) => {
@@ -15,12 +15,10 @@ const Progress = () => {
 
   return (
     <>
-      <Percent>{percentInfo}</Percent>
-      <ProgressBar>
-        <HighLight width={percent} length={bucketList.length} />
-      </ProgressBar>
+      <StyledPercent>{percentInfo}</StyledPercent>
+      <StyledProgressBar>
+        <StyledHighLight width={percent} length={bucketList.length} />
+      </StyledProgressBar>
     </>
   );
 };
-
-export default Progress;

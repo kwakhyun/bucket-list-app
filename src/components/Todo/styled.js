@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyleList = styled.div`
+export const StyledList = styled.div`
   height: 50vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -16,7 +16,7 @@ export const StyleList = styled.div`
   }
 `;
 
-export const StyleItem = styled.div`
+export const StyledItem = styled.div`
   height: 30px;
   display: flex;
   align-items: center;
